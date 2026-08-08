@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,155 +8,285 @@
     <meta name="robots" content="noindex, nofollow">
 
     <title>Domain Takeover - Proof of Concept</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background:
+                radial-gradient(circle at top, #0b1f1a 0%, #050807 45%, #020303 100%);
+            color: #d7ffe8;
+            font-family: "Courier New", monospace;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 70px 20px;
+        }
+
+        .terminal {
+            background: rgba(3, 10, 8, 0.92);
+            border: 1px solid #1f7a55;
+            box-shadow:
+                0 0 25px rgba(0, 255, 153, 0.12),
+                inset 0 0 30px rgba(0, 255, 153, 0.03);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .top-line {
+            color: #53ffb1;
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #00ff99;
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 12px rgba(0, 255, 153, 0.35);
+        }
+
+        h2 {
+            color: #7fffd4;
+            font-size: 21px;
+            font-weight: normal;
+            margin-bottom: 35px;
+        }
+
+        h3 {
+            color: #45d6ff;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #b7cfc5;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .researcher {
+            margin: 35px 0;
+            padding: 20px;
+            border-left: 3px solid #00ff99;
+            background: rgba(0, 255, 153, 0.04);
+        }
+
+        .researcher-name {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: #00ff99;
+        }
+
+        .cyan {
+            color: #45d6ff;
+        }
+
+        .status {
+            color: #6cff9d;
+            font-weight: bold;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #15382b;
+            margin: 35px 0;
+        }
+
+        .command {
+            color: #65ffaf;
+            margin-top: 25px;
+            font-size: 14px;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background: #00ff99;
+            vertical-align: middle;
+            animation: blink 1s infinite;
+        }
+
+        footer {
+            margin-top: 40px;
+            color: #608276;
+            font-size: 13px;
+        }
+
+        @keyframes blink {
+            0%, 50% {
+                opacity: 1;
+            }
+
+            51%, 100% {
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 92%;
+                padding: 30px 10px;
+            }
+
+            .terminal {
+                padding: 25px 18px;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <header>
-        <h2>Security Research Notice</h2>
-        <hr>
-    </header>
+    <div class="container">
 
-    <main>
+        <div class="terminal">
 
-        <section>
+            <div class="top-line">
+                [ SECURITY RESEARCH / RESPONSIBLE DISCLOSURE ]
+            </div>
 
-            <h1>Domain Takeover</h1>
+            <h1>DOMAIN TAKEOVER</h1>
 
-            <h2>Proof of Concept Successfully Demonstrated</h2>
+            <h2>
+                Proof of Concept Successfully Demonstrated
+            </h2>
 
             <p>
                 This page demonstrates that the affected domain or subdomain
-                can be controlled due to an insecure or dangling
-                DNS/hosting configuration.
+                can be controlled due to an insecure, dangling, or improperly
+                configured DNS and hosting reference.
             </p>
 
-            <p>
-                This Proof of Concept has been demonstrated by:
-            </p>
+            <div class="researcher">
 
-            <h3>Karan Kedarnath Doiphode</h3>
+                <p>
+                    Proof of Concept demonstrated by:
+                </p>
 
-            <p>
-                Security Researcher
-            </p>
+                <div class="researcher-name">
+                    Karan Kedarnath Doiphode
+                </div>
 
-        </section>
+                <p>
+                    Security Researcher
+                </p>
 
-        <hr>
+            </div>
 
-        <section>
+            <hr>
 
             <h3>Proof of Control</h3>
 
             <p>
-                <strong>Researcher:</strong>
+                <span class="cyan">Researcher:</span>
                 Karan Kedarnath Doiphode
             </p>
 
             <p>
-                <strong>Finding:</strong>
+                <span class="cyan">Finding:</span>
                 Domain / Subdomain Takeover
             </p>
 
             <p>
-                <strong>Status:</strong>
-                Proof of Concept Confirmed
+                <span class="cyan">Status:</span>
+                <span class="status">CONFIRMED</span>
             </p>
 
             <p>
-                <strong>Purpose:</strong>
+                <span class="cyan">Purpose:</span>
                 Authorized Security Testing and Responsible Disclosure
             </p>
 
-        </section>
-
-        <hr>
-
-        <section>
+            <hr>
 
             <h3>Security Impact</h3>
 
             <p>
-                The affected hostname references a resource that is no longer
-                properly controlled by the organization.
+                The affected hostname appears to reference an external resource
+                that is no longer properly controlled by the organization.
             </p>
 
             <p>
-                An unauthorized party may potentially claim the associated
-                external resource and serve arbitrary content through the
-                organization's trusted hostname.
+                If left unresolved, an unauthorized party may potentially claim
+                the referenced resource and serve arbitrary content through a
+                trusted organizational hostname.
             </p>
 
-        </section>
-
-        <hr>
-
-        <section>
+            <hr>
 
             <h3>Responsible Disclosure Notice</h3>
 
             <p>
-                This page exists exclusively to demonstrate control of the
-                affected hostname as part of security testing.
+                This page exists exclusively as a
+                <span class="highlight">Proof of Concept</span>
+                for security validation and responsible disclosure.
             </p>
 
             <p>
-                No credentials, personal information, financial information,
-                cookies, authentication tokens, or other sensitive information
-                are collected or stored.
+                No credentials, authentication tokens, personal information,
+                payment information, cookies, or other sensitive data are
+                collected or stored.
             </p>
 
             <p>
-                No malicious scripts, redirects, phishing forms, malware,
-                tracking mechanisms, or deceptive content are deployed.
+                No phishing forms, redirects, malware, tracking mechanisms,
+                or malicious scripts are deployed.
             </p>
 
-        </section>
-
-        <hr>
-
-        <section>
+            <hr>
 
             <h3>Recommended Remediation</h3>
 
             <p>
-                The affected organization should review the DNS configuration
-                for this hostname and remove any obsolete or dangling records.
+                Review the affected DNS configuration and remove any obsolete,
+                dangling, or unclaimed records.
             </p>
 
             <p>
-                Any external hosting service referenced by the DNS record
-                should remain under the organization's control or the DNS
-                record should be removed.
+                Any external hosting resource referenced by the DNS record
+                should remain under organizational control or the corresponding
+                DNS entry should be removed.
             </p>
 
-        </section>
+            <div class="command">
+                root@security-research:~$ takeover_status --verified
+                <span class="cursor"></span>
+            </div>
 
-    </main>
+            <footer>
+                <p>
+                    Domain Takeover Proof of Concept
+                </p>
 
-    <footer>
+                <p>
+                    Demonstrated by Karan Kedarnath Doiphode
+                </p>
 
-        <hr>
+                <p>
+                    Security Researcher | Responsible Disclosure
+                </p>
+            </footer>
 
-        <p>
-            <strong>Domain Takeover Proof of Concept</strong>
-        </p>
+        </div>
 
-        <p>
-            Demonstrated by Karan Kedarnath Doiphode
-        </p>
-
-        <p>
-            Security Researcher | Responsible Disclosure
-        </p>
-
-        <p>
-            No sensitive information is collected or stored.
-        </p>
-
-    </footer>
+    </div>
 
 </body>
 
 </html>
+
