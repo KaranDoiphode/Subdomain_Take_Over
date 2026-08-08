@@ -1,63 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Subdomain Takeover – Security PoC</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      background: #f4f6f8;
-      font-family: Arial, sans-serif;
-      color: #17202a;
-    }
-    main {
-      width: min(680px, 88%);
-      padding: 38px;
-      background: white;
-      border: 1px solid #d9dee3;
-      border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.08);
-    }
-    h1 { color: #b42318; }
-    .status {
-      padding: 12px;
-      background: #fff3f2;
-      border-left: 5px solid #b42318;
-    }
-    code {
-      background: #eef1f4;
-      padding: 3px 7px;
-      border-radius: 4px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Domain Takeover - Proof of Concept</title>
 </head>
+
 <body>
-  <main>
-    <h1>Subdomain Takeover – Proof of Control</h1>
 
-    <p class="status">
-      This page was created solely as a non-destructive security
-      proof of concept.
-    </p>
+    <header>
+        <h2>Security Research Notice</h2>
+        <hr>
+    </header>
 
-    <p>
-      The affected subdomain contained a dangling DNS configuration
-      that allowed it to be claimed through GitHub Pages.
-    </p>
+    <main>
 
-    <p>
-      No login form, credential collection, tracking, cookies,
-      malicious scripts, or user-data collection is present.
-    </p>
+        <section>
 
-    <p><strong>Researcher:</strong> Karan Doiphode </p>
-    <p><strong>Date:</strong> 2026-08-05</p>
-    <p><strong>Reference:</strong> <code>SUBDOMAIN-TAKEOVER-POC</code></p>
-  </main>
+            <h1>Domain Takeover</h1>
+
+            <h2>Proof of Concept Successfully Demonstrated</h2>
+
+            <p>
+                This page demonstrates that the affected domain or subdomain
+                can be controlled due to an insecure or dangling
+                DNS/hosting configuration.
+            </p>
+
+            <p>
+                This Proof of Concept has been demonstrated by:
+            </p>
+
+            <h3>Karan Kedarnath Doiphode</h3>
+
+            <p>
+                Security Researcher
+            </p>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h3>Proof of Control</h3>
+
+            <p>
+                <strong>Researcher:</strong>
+                Karan Kedarnath Doiphode
+            </p>
+
+            <p>
+                <strong>Finding:</strong>
+                Domain / Subdomain Takeover
+            </p>
+
+            <p>
+                <strong>Status:</strong>
+                Proof of Concept Confirmed
+            </p>
+
+            <p>
+                <strong>Purpose:</strong>
+                Authorized Security Testing and Responsible Disclosure
+            </p>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h3>Security Impact</h3>
+
+            <p>
+                The affected hostname references a resource that is no longer
+                properly controlled by the organization.
+            </p>
+
+            <p>
+                An unauthorized party may potentially claim the associated
+                external resource and serve arbitrary content through the
+                organization's trusted hostname.
+            </p>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h3>Responsible Disclosure Notice</h3>
+
+            <p>
+                This page exists exclusively to demonstrate control of the
+                affected hostname as part of security testing.
+            </p>
+
+            <p>
+                No credentials, personal information, financial information,
+                cookies, authentication tokens, or other sensitive information
+                are collected or stored.
+            </p>
+
+            <p>
+                No malicious scripts, redirects, phishing forms, malware,
+                tracking mechanisms, or deceptive content are deployed.
+            </p>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h3>Recommended Remediation</h3>
+
+            <p>
+                The affected organization should review the DNS configuration
+                for this hostname and remove any obsolete or dangling records.
+            </p>
+
+            <p>
+                Any external hosting service referenced by the DNS record
+                should remain under the organization's control or the DNS
+                record should be removed.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <hr>
+
+        <p>
+            <strong>Domain Takeover Proof of Concept</strong>
+        </p>
+
+        <p>
+            Demonstrated by Karan Kedarnath Doiphode
+        </p>
+
+        <p>
+            Security Researcher | Responsible Disclosure
+        </p>
+
+        <p>
+            No sensitive information is collected or stored.
+        </p>
+
+    </footer>
+
 </body>
+
 </html>
